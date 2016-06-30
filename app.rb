@@ -10,6 +10,9 @@ get('/') do
 end
 
 get('/outcome') do
-  # @outcome = params.fetch('user_input').combo()
+  @word_one = params.fetch('word_one')
+  @word_two = params.fetch('word_two')
+  @word_three = params.fetch('word_three')
+  @anagrams = params.fetch('word').anagram(@word_one, @word_two, @word_three)
   erb(:outcome)
 end
